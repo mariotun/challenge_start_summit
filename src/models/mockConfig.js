@@ -20,7 +20,7 @@ class MockConfig {
     const { route, method, query, body, headers } = request;
 
     // Debug logging
-    console.log('🔍 Matching attempt:', {
+    console.log('Intento de emparejamiento:', {
       configRoute: this.route,
       requestRoute: route,
       configMethod: this.method,
@@ -31,29 +31,29 @@ class MockConfig {
 
     // Verificar ruta y método
     if (this.route !== route || this.method !== method) {
-      console.log('❌ Route or method mismatch');
+      console.log('[ERROR]Desajuste de ruta o método.');
       return false;
     }
 
     // Verificar query parameters
     if (!this._paramsMatch(this.queryParams, query)) {
-      console.log('❌ Query params mismatch');
+      console.log('[ERROR]Los parámetros de consulta no coinciden.');
       return false;
     }
 
     // Verificar body parameters
     if (!this._paramsMatch(this.bodyParams, body)) {
-      console.log('❌ Body params mismatch');
+      console.log('[ERROR]Los parámetros corporales no coinciden.');
       return false;
     }
 
     // Verificar headers
     if (!this._headersMatch(this.headers, headers)) {
-      console.log('❌ Headers mismatch');
+      console.log('[ERROR]Los encabezados no coinciden');
       return false;
     }
 
-    console.log('✅ Full match found!');
+    console.log('[OK]Coincidencia completa encontrada !!!');
     return true;
   }
 

@@ -18,7 +18,7 @@ class MockConfigService {
   getMockById(id) {
     const config = storage.getById(id);
     if (!config) {
-      const error = new Error('Mock configuration not found');
+      const error = new Error('No se encontró la configuración simulada.');
       error.status = 404;
       throw error;
     }
@@ -29,7 +29,7 @@ class MockConfigService {
   deleteMock(id) {
     const deleted = storage.delete(id);
     if (!deleted) {
-      const error = new Error('Mock configuration not found');
+      const error = new Error('No se encontró la configuración simulada.');
       error.status = 404;
       throw error;
     }

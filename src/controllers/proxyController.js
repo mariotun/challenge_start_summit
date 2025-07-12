@@ -16,7 +16,7 @@ class ProxyController {
       const requestData = matchingService.prepareRequest(req);
       
       // Debug: log del request que estamos intentando hacer match
-      console.log('🔍 Trying to match request:', {
+      console.log('Intentando hacer coincidir la solicitud:', {
         route: requestData.route,
         method: requestData.method,
         query: requestData.query
@@ -26,11 +26,11 @@ class ProxyController {
       const matchingConfig = matchingService.findMatchingConfig(requestData);
       
       if (!matchingConfig) {
-        console.log('❌ No matching config found');
+        console.log('No se encontró ninguna configuración coincidente.');
         return responseBuilder.buildErrorResponse(
           res, 
           404, 
-          'No mock configuration found for this request',
+          'No se encontró ninguna configuración simulada para esta solicitud.',
           {
             requestedRoute: requestData.route,
             requestedMethod: requestData.method
@@ -38,7 +38,7 @@ class ProxyController {
         );
       }
 
-      console.log('✅ Found matching config:', matchingConfig.id);
+      console.log('Configuración coincidente encontrada:', matchingConfig.id);
 
       // Procesar plantillas dinámicas
       const processedBody = templateService.processTemplate(

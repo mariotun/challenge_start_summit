@@ -11,7 +11,7 @@ class MockController {
         res, 
         mockConfig, 
         201, 
-        'Mock configuration created successfully'
+        'Mock creado correctamente !!!'
       );
     } catch (error) {
       next(error);
@@ -54,7 +54,7 @@ class MockController {
     try {
       const storage = require('../storage/memoryStorage');
       storage.clear();
-      responseBuilder.buildSuccessResponse(res, null, 200, 'All mock configurations cleared');
+      responseBuilder.buildSuccessResponse(res, null, 200, 'Se limpiaron todas las configuraciones de Mock correctamente !!!');
     } catch (error) {
       next(error);
     }

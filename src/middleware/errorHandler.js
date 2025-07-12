@@ -24,7 +24,7 @@ const errorHandler = (err, req, res, next) => {
   // Error genérico del servidor
   res.status(500).json({
     error: true,
-    message: 'Internal server error',
+    message: 'Error Interno del Servidor',
     timestamp: new Date().toISOString()
   });
 };
