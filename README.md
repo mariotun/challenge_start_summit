@@ -4,6 +4,9 @@
 
 API desarrollada para simular el comportamiento de servicios externos mediante mocks configurables dinámicamente. Facilita el desarrollo y las pruebas de sistemas que dependen de servicios externos, permitiendo definir respuestas personalizadas según la configuración especificada.
 
+[📋 Requerimiento completo](docs/requerimiento.pdf)
+</br>
+
 ## 🚀 Características Principales
 
 - ✅ **Configuración Dinámica**: Creación de mocks en tiempo real sin reiniciar el servidor
@@ -15,12 +18,19 @@ API desarrollada para simular el comportamiento de servicios externos mediante m
 
 ## 🛠️ Tecnologías Utilizadas
 
+### Revisar: 
+[📋 Herramientas extras utilizadas](docs/herramientas.md)
+</br>
+
 - **Backend**: Node.js + Express.js
 - **Validación**: Joi
 - **Containerización**: Docker + Docker Compose
 - **Almacenamiento**: In-memory (escalable a BD)
 
 ## 📦 Instalación y Ejecución
+
+### Revisar:
+[📋 Instalacion y Ejecucion](docs/instalacionejecucion.md)
 
 ### Opción 1: Ejecución Local
 
@@ -32,7 +42,7 @@ API desarrollada para simular el comportamiento de servicios externos mediante m
 ```bash
 # 1. Clonar el repositorio
 git clone <url-del-repositorio>
-cd Challenge-Start-Summit-2025
+cd challenge_start_summit
 
 # 2. Instalar dependencias
 npm install
@@ -56,7 +66,7 @@ La API estará disponible en: `http://localhost:3000`
 ```bash
 # 1. Clonar el repositorio
 git clone <url-del-repositorio>
-cd Challenge-Start-Summit-2025
+cd challenge_start_summit
 
 # 2. Ejecutar con Docker Compose
 docker-compose up --build
@@ -90,6 +100,11 @@ curl http://localhost:3000/health
 ```
 
 ## 📚 Uso de la API
+
+### Revisar: 
+[📋 Tabla de Endpoints](docs/tablaendpoints.pdf)
+</br>
+[📋 Ejmplo de ejecucion en la terminal](docs/ejemploapi.md)
 
 ### Endpoints Administrativos
 
