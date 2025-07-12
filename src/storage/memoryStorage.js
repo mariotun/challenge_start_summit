@@ -27,22 +27,22 @@ class MemoryStorage {
 
   // Buscar configuración que coincida con el request
   findMatch(request) {
-    console.log('🔍 Storage: Looking for match in', this.configs.size, 'configurations');
+    console.log('Almacenamiento: Buscando coincidencia en ', this.configs.size, ' configuraciones');
     
     for (const config of this.configs.values()) {
-      console.log('🔍 Checking config:', {
+      console.log('Comprobando la configuración:', {
         id: config.id,
         route: config.route,
         method: config.method
       });
       
       if (config.matches(request)) {
-        console.log('✅ Match found:', config.id);
+        console.log('[OK]Coincidencia encontrada:', config.id);
         return config;
       }
     }
     
-    console.log('❌ No match found in storage');
+    console.log('[ERROR]No se encontró ninguna coincidencia en el almacenamiento');
     return null;
   }
 

@@ -17,7 +17,7 @@ const validators = {
     const { error, value } = mockConfigSchema.validate(data, { abortEarly: false });
     if (error) {
       const details = error.details.map(detail => detail.message);
-      const validationError = new Error('Validation failed');
+      const validationError = new Error('La validación falló');
       validationError.status = 400;
       validationError.details = details;
       throw validationError;
